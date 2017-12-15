@@ -1,7 +1,7 @@
 {
-  "name": "react-messenger-plugin",
-  "version": "2.0.0",
-  "description": "React wrapper for the Facebook Messenger Plugin",
+  "name": "react-messenger-checkbox-plugin",
+  "version": "1.0.2",
+  "description": "React wrapper for the Facebook Messenger Checkbox Plugin",
   "main": "lib/MessengerPluginWrapper.js",
   "scripts": {
     "build": "rm -rf lib/ && babel -d lib/ src/",
@@ -11,12 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lemieux/react-messenger-plugin.git"
+    "url": "https://github.com/andrecrts/react-messenger-plugin"
   },
   "keywords": [
     "react",
     "facebook",
     "messenger",
+    "checkbox",
     "send-to-messenger"
   ],
   "author": "Marc-Antoine Lemieux",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/lemieux/react-messenger-plugin#readme",
   "dependencies": {
+    "random-string": "0.2.0",
     "react-async-script": "0.9.1"
   },
   "devDependencies": {
