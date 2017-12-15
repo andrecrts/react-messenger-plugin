@@ -1,6 +1,6 @@
 {
   "name": "react-messenger-checkbox-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React wrapper for the Facebook Messenger Checkbox Plugin",
   "main": "lib/MessengerPluginWrapper.js",
   "scripts": {
