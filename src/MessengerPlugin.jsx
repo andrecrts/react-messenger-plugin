@@ -15,8 +15,6 @@ export default class MessengerPlugin extends Component {
         size: PropTypes.oneOf(['standard', 'large', 'xlarge'])
     };
 
-
-
     static defaultProps = {
         color: 'blue',
         size: 'standard',
@@ -29,17 +27,23 @@ export default class MessengerPlugin extends Component {
     initFacebookSDK() {
         const {FB, appId} = this.props;
 
-        if (FB) {
-            FB.init({
-                appId,
-                xfbml: true,
-                version: 'v2.6'
-            });
+        if (FB && !this.init) {
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId,
+                    xfbml: true,
+                    version: 'v2.6'
+                });
+            };
         }
     }
 
     componentDidMount() {
         this.props.onRef(this);
+        this.initFacebookSDK();
+    }
+
+    componentDidUpdate() {
         this.initFacebookSDK();
     }
 
