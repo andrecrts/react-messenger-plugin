@@ -43,10 +43,6 @@ export default class MessengerPlugin extends Component {
         this.initFacebookSDK();
     }
 
-    componentDidUpdate() {
-        this.initFacebookSDK();
-    }
-
     componentWillUnmount() {
         this.props.onRef(undefined)
       }
